@@ -2,6 +2,8 @@
 <div></div>
 <%= @game.current_turn.name %>'s turn
 <div></div>
+<%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
+<div></div>
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
 
 <form action="/attack">
