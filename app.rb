@@ -30,6 +30,11 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  get '/game_over' do
+    @game = $game
+    erb :game_over
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

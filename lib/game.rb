@@ -23,4 +23,20 @@ class Game
       @opponent = player_2
     end
   end
+
+  def game_over?
+    return true if any_player_on_0HP
+    return false
+  end
+
+  def loser
+    return @player_1 if @player_1.hit_points == 0
+    return @player_2
+  end
+
+  private
+
+  def any_player_on_0HP
+    @player_1.hit_points == 0 || @player_2.hit_points == 0
+  end
 end
